@@ -1,0 +1,96 @@
+.todo {
+  &__list-wrap {
+    border-top: 1px solid #e6e6e6;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+  &__li {
+    position: relative;
+
+    padding: 15px;
+    padding-right: 60px;
+    padding-left: 60px;
+    border-bottom: 1px solid #ededed;
+
+    font-size: 2.4rem;
+
+    text-align: left;
+
+    color: inherit;
+    &:hover .todo__del-btn {
+      display: block;
+    }
+  }
+  &__task-input-complete {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    //visibility: hidden;
+
+    display: block;
+
+    width: 40px;
+    min-height: 40px;
+    margin: auto 0;
+  }
+  &__task-label {
+    position: relative;
+
+    margin-right: 60px;
+  }
+  &__edit-input {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+
+    width: 90%;
+    min-height: auto;
+    margin: 0;
+    margin-left: 10%;
+
+    color: inherit;
+    font-size: inherit;
+  }
+  &__del-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    border: none;
+
+    outline: none;
+    background-color: transparent;
+
+    cursor: pointer;
+  }
+  &__list-all-complete {
+    position: absolute;
+    top: 20px;
+    left: 2%;
+  }
+}
+.todo__task-input-complete:checked + .todo__task-label{
+  text-decoration: line-through;
+}
+// .completed {
+//   text-decoration: line-through;
+// }
+.visibility {
+  visibility: hidden;
+}
+.hidden {
+  display: none;
+}

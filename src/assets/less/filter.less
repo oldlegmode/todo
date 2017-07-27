@@ -1,0 +1,70 @@
+.todo {
+  &__filter {
+    position: relative;
+    padding: 10px 15px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      display: block;
+    }
+    &::before {
+      position: absolute;
+
+      display: block;
+    }
+  }
+  &__filter-text {
+    float: left;
+    padding-top: 7px;
+
+    text-align: left;
+  }
+  &__filter-list {
+    
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__filter-li {
+    display: inline-block;
+  }
+  &__filter-link {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 7px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      border-color: rgba(175, 47, 47, 0.2);
+    }
+  }
+  &__filter-link--active {
+    border-color: rgba(175, 47, 47, 0.2);
+  }
+  &__del-completed {
+    position: absolute;
+    right: 15px;
+    top: 17px;
+
+    text-align: right;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
