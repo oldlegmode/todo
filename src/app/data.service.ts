@@ -2,9 +2,10 @@ import {Tasks} from './tasks';
 
 export class DataService {
   private data: Tasks[]= [
-        { item:"Apple iPhone 7", complete: false},
-        { item: "HP Elite x3", complete: false},
-        { item: "Alcatel Idol S4", complete: false}
+        { item:"Get an assignment", complete: false},
+        { item: "To do an assignment", complete: false},
+        { item: "???", complete: false},
+        { item: "PROFIT", complete: false}
     ];
   getData(): Tasks[] {
     return this.data;

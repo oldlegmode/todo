@@ -97,6 +97,8 @@ export class listActive {
     let btnDel: any = input.nextElementSibling.nextElementSibling;
     let label: any = input.nextElementSibling;
 
+    if(newTask.length > 255) newTask = newTask.slice(0, 256);
+
     label.classList.toggle('visibility');
     btnDel.classList.toggle('visibility');
     input.type = 'checkbox';
