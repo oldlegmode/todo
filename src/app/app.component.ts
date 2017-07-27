@@ -25,16 +25,16 @@ export class todo {
     this.items = this.data.getData();
   };
 
-  addItem(item: string, description: string, complete: boolean) {
+  addItem(item: string, complete: boolean) {
 
-    this.data.addData(item, description, complete)
+    this.data.addData(item, complete)
   };
 
-  onEnter(value: string, description: string) {
+  onEnter(value: string) {
     if( (value = value.trim()) == '') {
       return;
     };
-    this.data.addData(value, description, false);
+    this.data.addData(value, false);
   };
 
 }

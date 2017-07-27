@@ -1,6 +1,4 @@
 export class Tasks {
-  constructor (public name: string, 
-               public description: string,
-               public complete: boolean
-               ) {}
+  constructor (public item: string, 
+               public complete: boolean) {}
 }

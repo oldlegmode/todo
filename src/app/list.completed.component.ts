@@ -11,9 +11,8 @@ import {Tasks} from './tasks';
                     <input class="todo__task-input-complete" id="task-{{i+1}}" type="checkbox" [checked]="item.complete" #input 
                     [attr.data-index]="i" (change)="complete(input, input-index)" (blur)="onblur($event)" >
                     <label class="todo__task-label" for="task-{{i+1}}" [attr.data-index]="i">
-                      {{item.name}}
+                      {{item.item}}
                     </label>
-                    <p class="todos__description">{{item.description}}</p>
                     <button #but class="todo__del-btn" [attr.data-index]="i" (click)="removeItem(but)">[x]</button>
                   </li>
                 </ul>

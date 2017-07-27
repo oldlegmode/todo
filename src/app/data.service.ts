@@ -2,15 +2,15 @@ import {Tasks} from './tasks';
 
 export class DataService {
   private data: Tasks[]= [
-        { name:"Apple iPhone 7", description: 'fasf', complete: false},
-        { name: "HP Elite x3", description: 'fasf', complete: false},
-        { name: "Alcatel Idol S4", description: 'fasf', complete: false}
+        { item:"Apple iPhone 7", complete: false},
+        { item: "HP Elite x3", complete: false},
+        { item: "Alcatel Idol S4", complete: false}
     ];
   getData(): Tasks[] {
     return this.data;
   }
-  addData(item: string, description: string, complete: boolean) {
-    this.data.push(new Tasks(item, description, complete))
+  addData(item: string, complete: boolean) {
+    this.data.push(new Tasks(item, complete))
   }
   removeData(index: number) {
     this.data.splice(index, 1);
@@ -34,15 +34,9 @@ export class DataService {
     return 'hidden'
   }
   getItem(index: number) {
-    return this.data[index].name;
+    return this.data[index].item;
   }
   setItem(index: number, value: string) {
-    this.data[index].name = value;
-  }
-  getDescription(index: number) {
-    return this.data[index].description;
-  }
-  setDescription(index: number, value: string) {
-    this.data[index].description = value;
+    this.data[index].item = value;
   }
 }
